@@ -79,7 +79,10 @@ export default {
           const apiKey =
             envRecord?.RESEND_API_KEY ||
             (typeof process !== "undefined" ? process.env?.RESEND_API_KEY : undefined);
-          const targetEmail = "fitaalemayehu12@gmail.com";
+          const targetEmail =
+            envRecord?.CONTACT_TO_EMAIL ||
+            (typeof process !== "undefined" ? process.env?.CONTACT_TO_EMAIL : undefined) ||
+            "fitaalemayehu12@gmail.com";
 
           const topicStr =
             Array.isArray(topics) && topics.length > 0
