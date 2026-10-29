@@ -204,3 +204,15 @@ html.dark,
     animation-play-state: paused;
   }
 }
+
+/* Hide Netlify injected badge / toolbar */
+#netlify-badge,
+iframe[src*="netlify"],
+a[href*="netlify.com/-/?utm_source=badge"],
+[data-netlify-badge],
+netlify-drawer {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
