@@ -571,7 +571,7 @@ export function Contact() {
       {/* Ambient background decoration */}
       <div
         aria-hidden="true"
-        className="contact-blob-1 pointer-events-none absolute -top-12 -right-12 w-[340px] sm:w-[480px] h-[340px] sm:h-[480px] rounded-full"
+        className="contact-blob-1 pointer-events-none absolute -top-12 -right-12 w-85 sm:w-120 h-85 sm:h-120 rounded-full"
         style={{
           background: "var(--blob-color)",
           filter: "blur(80px)",
@@ -580,7 +580,7 @@ export function Contact() {
       />
       <div
         aria-hidden="true"
-        className="contact-blob-2 pointer-events-none absolute -bottom-16 -left-16 w-[340px] sm:w-[480px] h-[340px] sm:h-[480px] rounded-full"
+        className="contact-blob-2 pointer-events-none absolute -bottom-16 -left-16 w-85 sm:w-120 h-85 sm:h-120 rounded-full"
         style={{
           background: "var(--blob-color)",
           filter: "blur(80px)",
@@ -862,7 +862,7 @@ export function Contact() {
                               className={`inline-flex items-center gap-1.5 text-[13px] px-4 py-2 rounded-full border transition-all duration-200 select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground ${
                                 isSelected
                                   ? "bg-foreground text-background border-foreground font-semibold"
-                                  : "bg-foreground/[0.05] text-foreground border-foreground/22 hover:border-foreground/50"
+                                  : "bg-foreground/5 text-foreground border-foreground/22 hover:border-foreground/50"
                               }`}
                             >
                               {isSelected && <Check className="w-3.5 h-3.5" />}
@@ -902,7 +902,7 @@ export function Contact() {
                               className={`inline-flex items-center gap-1.5 text-[13px] px-4 py-2 rounded-full border transition-all duration-200 select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground ${
                                 isChecked
                                   ? "bg-foreground text-background border-foreground font-semibold"
-                                  : "bg-foreground/[0.05] text-foreground border-foreground/22 hover:border-foreground/50"
+                                  : "bg-foreground/5 text-foreground border-foreground/22 hover:border-foreground/50"
                               }`}
                             >
                               {isChecked && <Check className="w-3.5 h-3.5" />}
@@ -949,10 +949,10 @@ export function Contact() {
                         autoComplete="name"
                         aria-invalid={!!(touched.name && errors.name)}
                         aria-describedby={touched.name && errors.name ? "name-error" : undefined}
-                        className={`w-full h-14 rounded-[18px] border bg-foreground/[0.04] px-4 pt-4 pb-1 text-sm text-foreground outline-none transition-colors ${
+                        className={`w-full h-14 rounded-[18px] border bg-foreground/4 px-4 pt-4 pb-1 text-sm text-foreground outline-none transition-colors ${
                           touched.name && errors.name
                             ? "border-foreground/60 field-shake"
-                            : "border-foreground/22 focus:border-foreground/70 focus:ring-4 focus:ring-foreground/[0.12]"
+                            : "border-foreground/22 focus:border-foreground/70 focus:ring-4 focus:ring-foreground/12"
                         }`}
                       />
                       <label
@@ -996,10 +996,10 @@ export function Contact() {
                         autoComplete="email"
                         aria-invalid={!!(touched.email && errors.email)}
                         aria-describedby={touched.email && errors.email ? "email-error" : undefined}
-                        className={`w-full h-14 rounded-[18px] border bg-foreground/[0.04] px-4 pt-4 pb-1 text-sm text-foreground outline-none transition-colors ${
+                        className={`w-full h-14 rounded-[18px] border bg-foreground/4 px-4 pt-4 pb-1 text-sm text-foreground outline-none transition-colors ${
                           touched.email && errors.email
                             ? "border-foreground/60 field-shake"
-                            : "border-foreground/22 focus:border-foreground/70 focus:ring-4 focus:ring-foreground/[0.12]"
+                            : "border-foreground/22 focus:border-foreground/70 focus:ring-4 focus:ring-foreground/12"
                         }`}
                       />
                       <label
@@ -1041,10 +1041,10 @@ export function Contact() {
                         aria-describedby={
                           touched.message && errors.message ? "message-error" : undefined
                         }
-                        className={`w-full min-h-[140px] max-h-[320px] rounded-[18px] border bg-foreground/[0.04] px-4 pt-6 pb-6 text-sm text-foreground outline-none resize-none transition-colors ${
+                        className={`w-full min-h-35 max-h-80 rounded-[18px] border bg-foreground/4 px-4 pt-6 pb-6 text-sm text-foreground outline-none resize-none transition-colors ${
                           touched.message && errors.message
                             ? "border-foreground/60 field-shake"
-                            : "border-foreground/22 focus:border-foreground/70 focus:ring-4 focus:ring-foreground/[0.12]"
+                            : "border-foreground/22 focus:border-foreground/70 focus:ring-4 focus:ring-foreground/12"
                         }`}
                       />
                       <label
@@ -1081,7 +1081,7 @@ export function Contact() {
                   {formStatus === "error" && (
                     <div
                       role="alert"
-                      className="p-4 rounded-xl border border-foreground/30 bg-foreground/[0.04] text-sm text-foreground flex flex-col gap-2"
+                      className="p-4 rounded-xl border border-foreground/30 bg-foreground/4 text-sm text-foreground flex flex-col gap-2"
                     >
                       <p>
                         {serverErrorMsg || (

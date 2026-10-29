@@ -291,7 +291,7 @@ export function ProjectShowcase() {
                     className="h-full w-full object-cover object-bottom"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-background/40 to-transparent" />
               </button>
             ) : (
               <div className="mb-2.5 h-7" aria-hidden="true" />

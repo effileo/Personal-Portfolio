@@ -350,7 +350,7 @@ export function Hero() {
         {/* Layer 2: Flowing Dark Shape SVG (S-curve around x = 50) */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-[1] h-full w-full"
+          className="pointer-events-none absolute inset-0 z-1 h-full w-full"
           style={{ filter: "drop-shadow(-18px 0 36px rgba(0,0,0,0.14))" }}
         >
           <svg
@@ -398,7 +398,7 @@ export function Hero() {
         {/* Layer 3: Light Blobs (mix-blend-mode: difference) */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-[2] overflow-hidden"
+          className="pointer-events-none absolute inset-0 z-2 overflow-hidden"
           style={{
             mixBlendMode: "difference",
             transform: "translateY(var(--blob-parallax, 0px))",
@@ -458,7 +458,7 @@ export function Hero() {
         {/* Layer 4: Silk Ribbons (mix-blend-mode: difference) */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-[3] overflow-hidden"
+          className="pointer-events-none absolute inset-0 z-3 overflow-hidden"
           style={{
             mixBlendMode: "difference",
             transform: "translateY(var(--ribbon-parallax, 0px))",
@@ -577,17 +577,17 @@ export function Hero() {
             </motion.h1>
 
             {/* 2. Tagline */}
-            <p className="mt-[12px] text-[1.3rem] font-bold leading-snug tracking-tight text-[#151515] line-clamp-2">
+            <p className="mt-3 text-[1.3rem] font-bold leading-snug tracking-tight text-[#151515] line-clamp-2">
               {profile.tagline}
             </p>
 
             {/* 3. Gray paragraph */}
-            <p className="mt-[14px] max-w-[360px] text-[1rem] leading-[1.7] text-[#555555]">
+            <p className="mt-3.5 max-w-90 text-[1rem] leading-[1.7] text-[#555555]">
               {profile.intro}
             </p>
 
             {/* 4. Two buttons: Liquid solid button + Glass-light button */}
-            <div className="mt-[24px] flex flex-wrap items-center gap-3">
+            <div className="mt-6 flex flex-wrap items-center gap-3">
               <a
                 href="#work"
                 onMouseEnter={handleLiquidButtonCoords}
@@ -606,7 +606,7 @@ export function Hero() {
             </div>
 
             {/* 5. Divider line + glass-light tech chips + degree label */}
-            <div className="mt-[24px] border-t border-black/10 pt-5">
+            <div className="mt-6 border-t border-black/10 pt-5">
               <div className="flex flex-wrap items-center gap-4">
                 <div className="flex -space-x-2">
                   {heroIcons.map((Icon, i) => (
@@ -721,7 +721,7 @@ export function Hero() {
             />
           </div>
 
-          <div className="relative z-10 mx-auto max-w-[560px]">
+          <div className="relative z-10 mx-auto max-w-140">
             <motion.h1
               initial={reduce ? false : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -737,15 +737,15 @@ export function Hero() {
               <span>FITA ALEMAYEHU</span>
             </motion.h1>
 
-            <p className="mt-[12px] text-[1.25rem] md:text-[1.3rem] font-bold leading-snug tracking-tight text-[#151515]">
+            <p className="mt-3 text-[1.25rem] md:text-[1.3rem] font-bold leading-snug tracking-tight text-[#151515]">
               {profile.tagline}
             </p>
 
-            <p className="mt-[14px] max-w-[560px] text-[1rem] leading-[1.7] text-[#555555]">
+            <p className="mt-3.5 max-w-140 text-[1rem] leading-[1.7] text-[#555555]">
               {profile.intro}
             </p>
 
-            <div className="mt-[24px] flex flex-wrap items-center gap-3">
+            <div className="mt-6 flex flex-wrap items-center gap-3">
               <a
                 href="#work"
                 onMouseEnter={handleLiquidButtonCoords}
@@ -763,7 +763,7 @@ export function Hero() {
               </a>
             </div>
 
-            <div className="mt-[24px] border-t border-black/10 pt-5">
+            <div className="mt-6 border-t border-black/10 pt-5">
               <div className="flex flex-wrap items-center gap-4">
                 <div className="flex -space-x-2">
                   {heroIcons.map((Icon, i) => (
@@ -799,7 +799,7 @@ export function Hero() {
           {/* Flowing Dark Shape SVG inside portrait stage */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 z-[1] h-full w-full"
+            className="pointer-events-none absolute inset-0 z-1 h-full w-full"
             style={{ filter: "drop-shadow(-18px 0 36px rgba(0,0,0,0.14))" }}
           >
             <svg
@@ -845,7 +845,7 @@ export function Hero() {
           {/* One Silk Ribbon across stage */}
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 z-[2] overflow-hidden"
+            className="pointer-events-none absolute inset-0 z-2 overflow-hidden"
             style={{ mixBlendMode: "difference" }}
           >
             <svg
@@ -917,7 +917,7 @@ export function Hero() {
             className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden"
           >
             <div
-              className="h-[260px] w-[260px] rounded-full bg-[#FFFFFF]"
+              className="h-65 w-65 rounded-full bg-[#FFFFFF]"
               style={{ filter: "blur(60px)", opacity: 0.12 }}
             />
           </div>
@@ -925,7 +925,7 @@ export function Hero() {
           <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col md:flex-row items-center justify-center gap-4">
             {/* AVAILABLE FOR badge (glass, backdrop blur 16px) */}
             <div
-              className="glass float-badge w-full max-w-[360px] rounded-full px-5 py-3 text-white"
+              className="glass float-badge w-full max-w-90 rounded-full px-5 py-3 text-white"
               style={{ backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)" }}
             >
               <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.15em] text-white/70">
@@ -938,7 +938,7 @@ export function Hero() {
 
             {/* Quote Card (glass, backdrop blur 16px) */}
             <figure
-              className="glass float-quote w-full max-w-[360px] rounded-[24px] p-6 text-white shadow-lift"
+              className="glass float-quote w-full max-w-90 rounded-[24px] p-6 text-white shadow-lift"
               style={{ backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)" }}
             >
               <Quote className="h-5 w-5 text-white/60" />

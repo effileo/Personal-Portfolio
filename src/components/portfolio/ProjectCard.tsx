@@ -18,8 +18,8 @@ export function ProjectCard({
       className={cn(
         "relative overflow-hidden rounded-3xl bg-surface",
         isPortrait
-          ? "aspect-[9/16] h-[60vh] max-h-[60vh] lg:h-[min(28.2vw,70vh)] lg:max-h-[70vh] w-auto mx-auto"
-          : "aspect-[16/10] w-full",
+          ? "aspect-9/16 h-[60vh] max-h-[60vh] lg:h-[min(28.2vw,70vh)] lg:max-h-[70vh] w-auto mx-auto"
+          : "aspect-16/10 w-full",
         active ? "border-2 border-foreground shadow-glow" : "border border-border",
         className,
       )}
@@ -54,7 +54,7 @@ export function ProjectCard({
 
       {/* Title overlay: only shown for full-bleed landscape cover cards */}
       {!isPortrait && !shouldContain && (
-        <div className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-ink/90 to-transparent p-5 pt-16">
+        <div className="absolute inset-x-0 bottom-0 z-20 bg-linear-to-t from-ink/90 to-transparent p-5 pt-16">
           <span className="text-lg font-bold tracking-tight text-ink-foreground">
             {project.title}
           </span>
