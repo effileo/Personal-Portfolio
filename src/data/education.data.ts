@@ -60,6 +60,21 @@ export const certificatesList: CertificateItem[] = [
     tech: [".NET", "React", "Redux"],
   },
   {
+    id: "udemy-nodejs",
+    featured: false,
+    title: "Node.js - Build Fast and Scalable Backend Applications",
+    issuer: "Udemy",
+    platform: "Udemy",
+    type: "Online course",
+    date: "March 4, 2026",
+    instructor: "Muhammad Riaz Uddin",
+    hours: "2.5 total hours",
+    accent: "#A435F0",
+    image: "/certificates/udemy-3.jpg",
+    credentialUrl:
+      "https://www.udemy.com/certificate/UC-4703d65c-c792-4419-b1ce-d49ff22b5ff0/",
+  },
+  {
     id: "udemy-python-html",
     featured: false,
     title: "HTML 5 With Quizzes And Python 3 Complete Course",

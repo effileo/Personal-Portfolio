@@ -4172,6 +4172,13 @@ export function Education() {
           }
         }
 
+        /* Other Certificates Grid: Auto-fit on desktop for any number of cards without empty gaps */
+        @media (min-width: 1024px) {
+          .other-certs-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          }
+        }
+
         /* Stamp Animation: scale 1.7 to 1, rotate -18 to -8 over 520ms */
         @keyframes verified-stamp-drop {
           0% {
@@ -4439,7 +4446,7 @@ export function Education() {
 
           {/* BLOCK C: OTHER CERTIFICATES */}
           {otherCertificates.length > 0 && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+            <div className="other-certs-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
               {otherCertificates.map((cert) => (
                 <OtherCertificateCard
                   key={cert.id}
