@@ -107,7 +107,7 @@ export function Navbar() {
                   aria-label="View or download resume"
                 >
                   <div className="flex items-center gap-2.5">
-                    <FileText className="h-4 w-4 text-sky-400" />
+                    <FileText className="h-4 w-4 text-muted-foreground" />
                     <span>Resume</span>
                   </div>
                   <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-semibold text-primary">
